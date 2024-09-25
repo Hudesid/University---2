@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Subjects</title>
+</head>
+<body>
+<h1>{{subjects.name}}</h1>
+<ul>
+{% for subject in subjects.subjects.all %}
+    <li><a href="{% url 'teacher' pk=subject.pk %}">{{subject.name}}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
